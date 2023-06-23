@@ -8,19 +8,21 @@
  */
 void print_triangle(int size)
 {
-	int row, hashes, spaces;
+	int hght, base;
 
 	if (size <= 0)
-	{
 		_putchar('\n');
-	}
 	else
 	{
-		for (row = 1; row <= size; row++)
+		for (hght = 1; hght <= size; hght++)
 		{
-			for (spaces = size - row; spaces >= 1; spaces--)
+
+			for (base = 1; base <= size; base++)
 			{
-				_putchar(' ');
+				if ((hght + base) <= size)
+					_putchar(' ');
+				else
+					_putchar('#');
 			}
 			_putchar('\n');
 		}
