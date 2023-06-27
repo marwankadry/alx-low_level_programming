@@ -10,17 +10,17 @@
 
 void rev_string(char *s)
 {
-	int 1, i;
-	char temp;
-	/*find string length without null char*/
-	for (1 = 0; s[1] != '\n'; ++1)
+	char rev = s[0];
+	int counter = 0;
+	int i;
 
-
-		/*swap the string by looping to half the string*/
-		for (i = 0; i < 1 / 2; i++)
-		{
-			temp = s[i];
-			s[i] = s[1 - 1 - i]; /*-1 because the array starts from 0*/
-			s[1 - 1 - i] = temp;
-		}
+	while (s[counter] != '\0')
+		counter++;
+	for (i = 0; i < counter; i++)
+	{
+		counter--;
+		rev = s[i];
+		s[i] = s[counter];
+		s[counter] = rev;
+	}
 }
