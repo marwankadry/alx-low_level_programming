@@ -1,54 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "main.h"
 char *create_array(unsigned int, char);
 
 /**
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * *create_array - creates an array of chars.
+ * @c: char to initialize
+ * Return: pointer to the array initialized or NULL
  */
-void simple_print_buffer(char *buffer, unsigned int size)
 {
-	unsigned int i;
+	char *n = malloc(size);
 
-	i = 0;
-	while (i < size)
-	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
-	}
-	printf("\n");
-}
+	if (size == 0 || n == 0)
+		return (0);
 
-/**
- * main - check the code .
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char *buffer;
-	unsigned int size;
-
-	size = 72;
-	buffer = create_array(size, 'S');
-	if (buffer == NULL)
-	{
-		printf("failed to allocate memory\n");
-		return (1);
-	}
-	simple_print_buffer(buffer, size);
-	free(buffer);
-	return (0);
+	while (size--)
+		n[size] = c;
+	return (n);
 }
