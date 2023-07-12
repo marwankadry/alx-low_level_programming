@@ -4,10 +4,8 @@
 char *create_array(unsigned int, char);
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
  * *create_array - creates an array of chars.
+ * @size: size of the array
  * @c: char to initialize
  * Return: pointer to the array initialized or NULL
  */
