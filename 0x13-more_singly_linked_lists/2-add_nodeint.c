@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adds a node to the top
- * @head: pointer to first node
- * @n: value for new node
+ * listint_len - returns the number of elements in a linked lists
+ * @n: linked list of type listint_t to traverse
  *
- * Return: pointer to new node
+ * Return: number of nodes
  */
 size_t listint_len(const listint_t *h)
 {
